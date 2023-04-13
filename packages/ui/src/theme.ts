@@ -8,5 +8,6 @@ export const palette = {
     orange: '#F78965',
     green: '#7DDF64',
     blue: '#759FBC',
+    white: '#FFFFFF',
   },
 }
