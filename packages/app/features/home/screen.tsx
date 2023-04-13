@@ -2,6 +2,7 @@ import { Anchor, Button, H1, Paragraph, Separator, Sheet, XStack, YStack, useToa
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
+import { palette } from '@my/ui/src/theme'
 
 export function HomeScreen() {
   const linkProps = useLink({
@@ -9,8 +10,8 @@ export function HomeScreen() {
   })
 
   return (
-    <YStack f={1} jc="center" ai="center" p="$4" space>
-      <YStack space="$4" maw={600}>
+    <YStack backgroundColor={palette.colors.lapis} f={1} jc="center" ai="center" space>
+      <YStack backgroundColor={palette.colors.wheat} space="$4" p="$4" maw={600}>
         <H1 ta="center">Welcome to Tamagui.</H1>
         <Paragraph ta="center">
           Here's a basic starter to show navigating from one screen to another. This screen uses the
