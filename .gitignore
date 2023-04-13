@@ -37,6 +37,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
+#firebase
+.firebase/*
+
 # os
 .DS_Store
 THUMBS_DB
