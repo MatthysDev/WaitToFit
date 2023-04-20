@@ -3,8 +3,9 @@ import React from 'react'
 import { NativeNavigation } from 'app/navigation/native'
 import { Provider } from 'app/provider'
 import { useFonts } from 'expo-font'
+import Constants from 'expo-constants'
 
-export default function App() {
+function App() {
   const [loaded] = useFonts({
     Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
     InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
@@ -20,3 +21,11 @@ export default function App() {
     </Provider>
   )
 }
+
+let AppEntryPoint = App
+
+if (Constants?.expoConfig?.extra?.storybookEnabled === 'true') {
+  AppEntryPoint = require('./.storybook').default
+}
+
+export default AppEntryPoint
