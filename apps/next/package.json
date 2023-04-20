@@ -7,7 +7,9 @@
     "build": "cd ../.. && yarn build && cd apps/next && next build",
     "start": "next start",
     "serve": "NODE_ENV=production next start --port 8151",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@tamagui/next-theme": "1.14.4",
@@ -22,8 +24,16 @@
     "vercel": "latest"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.6",
+    "@storybook/addon-interactions": "^7.0.6",
+    "@storybook/addon-links": "^7.0.6",
+    "@storybook/blocks": "^7.0.6",
+    "@storybook/nextjs": "next",
+    "@storybook/react": "^7.0.6",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@tamagui/next-plugin": "1.14.4",
     "@types/node": "^18.6.4",
-    "eslint-config-next": "^13.0.4"
+    "eslint-config-next": "^13.0.4",
+    "storybook": "^7.0.6"
   }
 }
