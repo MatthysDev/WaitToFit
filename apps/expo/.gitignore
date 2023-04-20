@@ -125,3 +125,7 @@ web-build/
 dist/
 
 # @end expo-cli
+
+# storybook
+
+.storybook/storybook.requires.js
