@@ -2,12 +2,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { HomeScreen } from '../../features/home/screen'
 import { UserDetailScreen } from '../../features/user/detail-screen'
+import { SignInScreen } from 'app/features/sign/sign-screen'
 
 const Stack = createNativeStackNavigator<{
   home: undefined
   'user-detail': {
     id: string
   }
+  sign: undefined
 }>()
 
 export function NativeNavigation() {
@@ -22,6 +24,13 @@ export function NativeNavigation() {
         component={HomeScreen}
         options={{
           title: 'Home',
+        }}
+      />
+      <Stack.Screen
+        name="sign"
+        component={SignInScreen}
+        options={{
+          title: 'Sign',
         }}
       />
       <Stack.Screen

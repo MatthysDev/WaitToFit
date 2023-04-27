@@ -18,7 +18,10 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 export function HomeScreen() {
   const linkProps = useLink({
-    href: '/user/nate',
+    href: '/user/WaitToFitUser',
+  })
+  const linkProps2 = useLink({
+    href: '/sign',
   })
   const { top } = useSafeAreaInsets()
 
@@ -92,6 +95,8 @@ export function HomeScreen() {
 
       <XStack>
         <Button {...linkProps}>Link to user</Button>
+
+        <Button {...linkProps2}>Sign</Button>
       </XStack>
 
       <SheetDemo />
